@@ -13,45 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files x64">
+      <UniqueIdentifier>{f2b52858-1de7-482a-8c2a-0a426df721f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files x64">
+      <UniqueIdentifier>{a3096151-07e2-4d92-863b-9e98531741e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\ffi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\ffi_cfi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ffi_common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\fficonfig.h">
+    <ClInclude Include=".\aarch64_include\ffi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\ffitarget.h">
+    <ClInclude Include=".\aarch64_include\fficonfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\internal.h">
+    <ClInclude Include="..\..\src\aarch64\ffitarget.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aarch64\internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x64_include\ffi.h">
+      <Filter>Header Files x64</Filter>
+    </ClInclude>
+    <ClInclude Include="x64_include\fficonfig.h">
+      <Filter>Header Files x64</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\closures.c">
+    <ClCompile Include="..\..\src\closures.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\dlmalloc.c">
+    <ClCompile Include="..\..\src\dlmalloc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ffi.c">
+    <ClCompile Include="..\..\src\aarch64\ffi.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\prep_cif.c">
+    <ClCompile Include="..\..\src\prep_cif.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\types.c">
+    <ClCompile Include="..\..\src\types.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\x86\ffiw64.c">
+      <Filter>Source Files x64</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="src\win64_armasm.S" />
+    <None Include="..\..\src\x86\win64_intel.S" />
   </ItemGroup>
 </Project>
