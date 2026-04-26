@@ -587,7 +587,7 @@
     <CustomBuild Include="..\..\src\x86\sysv_intel.S">
       <Command>
         cl /FA /EP /nologo /I"..\..\include" /I".\win_include" /I"..\..\src\x86" "%(FullPath)" &gt; $(IntDir)sysv_intel.i
-        ml /c /Fo "$(IntDir)sysv_intel.obj" "$(IntDir)sysv_intel.i"
+        ml /c /safeseh /Fo "$(IntDir)sysv_intel.obj" "$(IntDir)sysv_intel.i"
       </Command>
       <Outputs>$(IntDir)sysv_intel.obj;%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MDd|ARM64'">true</ExcludedFromBuild>
