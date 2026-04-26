@@ -140,7 +140,11 @@
 #define SIZEOF_LONG_DOUBLE 8
 
 /* The size of 'size_t', as computed by sizeof. */
-#define SIZEOF_SIZE_T 8
+#ifdef _WIN64
+# define SIZEOF_SIZE_T 8
+#else
+# define SIZEOF_SIZE_T 4
+#endif
 
 /* Define to 1 if all of the C89 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
